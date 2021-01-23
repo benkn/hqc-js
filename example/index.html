@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>hqc-js demo</title>
+    <link rel="icon" href="logo.png">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+
+		<div class="page-header">
+			<h1>hqc-js <small>Simplifying Hydra through Javascript</small></h1>
+		</div>
+
+		<p class="lead">Here you can try out the hqc-js client!</p>
+
+		<form role="form">
+			<div class="form-group">
+			    <label for="host">Host</label>
+			    <input type="text" class="form-control" id="host" value="spawn-lax">
+		  	</div>
+
+		  	<div class="form-group">
+			    <label for="jobId">Job ID</label>
+			    <input type="text" class="form-control" id="job" value="cde1dc26-d0a2-4b93-9bbc-a48721e7b25f">
+		  	</div>
+
+		  	<div class="form-group">
+			    <label for="path">Query</label>
+			    <input type="text" class="form-control" id="path" value="/(25)+:+count">
+		  	</div>
+
+		  	<div class="form-group">
+		    	<label for="ops">Ops</label>
+		    	<input type="text" class="form-control" id="ops" value="gather=ks;sort=0:s:a;title=date,total">
+		  	</div>
+
+		  	<div class="form-group">
+		    	<label for="rops">Rops</label>
+		    	<input type="text" class="form-control" id="rops" value="gather=ks">
+		  	</div>
+
+		  	<button id="runButton" type="button" class="btn btn-primary btn-lg" onClick="runQuery()">Run Query</button>
+		</form>
+
+		<div id="results" style="text-align:center;margin-bottom:50px;">
+		</div>
+	</div>
+
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
